@@ -1,19 +1,21 @@
 package ru.job4j.chess.firuges.black;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
-public class BishopBlackTest extends TestCase {
+public class BishopBlackTest{
 
+    @Test
     public void testPosition() {
         BishopBlack bishopBlack = new BishopBlack(Cell.A1);
         Cell rsl = bishopBlack.position();
         assertEquals(rsl, Cell.A1);
     }
 
+    @Test
     public void testWay() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         Cell dest = Cell.findBy(6, 3);
@@ -23,6 +25,7 @@ public class BishopBlackTest extends TestCase {
 
     }
 
+    @Test
     public void testCopy() {
         BishopBlack bishopBlack = new BishopBlack(Cell.A1);
         Cell dest = Cell.findBy(1, 6);
